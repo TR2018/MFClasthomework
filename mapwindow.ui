@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MapWindow</class>
+ <widget class="QMainWindow" name="MapWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="styleSheet">
+       <string notr="true">QSpitter::hande1{
+	background-color::rgb(9, 9, 9);
+}</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="information_widget" native="true">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>船名：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" colspan="4">
+         <widget class="QLineEdit" name="ship_name_lineEdit"/>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>MMSI：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="4">
+         <widget class="QLineEdit" name="MMSI_lineEdit"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>呼号：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" colspan="4">
+         <widget class="QLineEdit" name="call_sign_lineEdit"/>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>船长：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="ship_length_lineEdit"/>
+        </item>
+        <item row="3" column="3" colspan="2">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>船宽：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <widget class="QLineEdit" name="ship_breath_lineEdit"/>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>吃水：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="displacement_lineEdit"/>
+        </item>
+        <item row="4" column="3" colspan="2">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>排水：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
+         <widget class="QLineEdit" name="draft_lineEdit"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>航向：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="2">
+         <widget class="QLineEdit" name="couse_lineEdit"/>
+        </item>
+        <item row="5" column="3" colspan="2">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>航速：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="5">
+         <widget class="QLineEdit" name="spped_lineEdit"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>经度：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" colspan="2">
+         <widget class="QLineEdit" name="longitude_lineEdit"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>纬度：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="4" colspan="2">
+         <widget class="QLineEdit" name="latitude_lineEdit"/>
+        </item>
+        <item row="7" column="0" colspan="3">
+         <widget class="QPushButton" name="inputship_button">
+          <property name="text">
+           <string>添加船</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="speed_label">
+          <property name="text">
+           <string>航速</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLabel" name="course_label">
+          <property name="text">
+           <string>航向</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QSlider" name="spped_verticalSlider">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="3">
+         <widget class="QSlider" name="course_verticalSlider">
+          <property name="maximum">
+           <number>359</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="3" colspan="3">
+         <widget class="QPushButton" name="deleteship_nutton">
+          <property name="text">
+           <string>删除船</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pixmap_widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>5</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <widget class="QTextEdit" name="information_textEdit">
+        <property name="geometry">
+         <rect>
+          <x>335</x>
+          <y>9</y>
+          <width>93</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>104</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>开始</string>
+    </property>
+    <widget class="QMenu" name="menuopen">
+     <property name="title">
+      <string>打开</string>
+     </property>
+     <addaction name="actionopenPic"/>
+     <addaction name="actionopenTxt"/>
+    </widget>
+    <addaction name="menuopen"/>
+    <addaction name="actionReturn"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionReturn">
+   <property name="text">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="actionopenPic">
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </action>
+  <action name="actionopenTxt">
+   <property name="text">
+    <string>打开序列化文档</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
